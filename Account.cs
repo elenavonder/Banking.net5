@@ -5,7 +5,10 @@ namespace Banking.Net5
     {
 
         private static int NextId = 1;
-        public int Id { get; set; };
+        public int Id { get; set; }
+        public double Balance { get; set; }
+        public string Description { get; set; }
+
 
         public Account()
         {
