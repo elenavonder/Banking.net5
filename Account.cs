@@ -9,6 +9,11 @@ namespace Banking.Net5
         public double Balance { get; set; }
         public string Description { get; set; }
 
+        public Account (string Description)
+        {
+            this.Id = NextId++;
+            this.Description = Description;
+        }
 
         public Account()
         {
