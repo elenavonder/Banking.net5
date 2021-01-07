@@ -9,6 +9,9 @@ namespace Banking.Net5
         public double Balance { get; set; }
         public string Description { get; set; }
 
+
+
+
         public double Withdraw(double amount)
         {
             if(amount <= 0)
@@ -17,8 +20,14 @@ namespace Banking.Net5
             }
             if(Balance < amount)
             {
-
+                var isfex = new InsufficientFundsExceptions();
+                isfex.AccountId = this.Id;
+                isfex.AmountWithdraw = amount;
+                isfex.Balance = this.Balance;
+                throw isfex;
             }
+            Balance -= amount;
+            return Balance;
         }
 
         public void print()
