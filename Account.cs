@@ -9,7 +9,14 @@ namespace Banking.Net5
         public double Balance { get; set; }
         public string Description { get; set; }
 
-
+        public double Withdraw(double amount)
+        {
+            if(amount <= 0)
+            {
+                return Balance;
+            }
+            if(Balance)
+        }
 
         public void print()
         {
