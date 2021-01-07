@@ -15,7 +15,10 @@ namespace Banking.Net5
             {
                 return Balance;
             }
-            if(Balance)
+            if(Balance < amount)
+            {
+
+            }
         }
 
         public void print()
