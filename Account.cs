@@ -9,8 +9,20 @@ namespace Banking.Net5
         public double Balance { get; set; }
         public string Description { get; set; }
 
+        public static double Deposit(double amount, Account acct)
+        {
+            return acct.Deposit(amount);
+        }
 
-
+        public double Deposit (double amount)
+        {
+            if(amount <= 0)
+            {
+                return Balance;
+            }
+            Balance = +amount;
+            return Balance;
+        }
 
         public double Withdraw(double amount)
         {
