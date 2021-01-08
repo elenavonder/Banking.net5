@@ -15,6 +15,11 @@ namespace Banking.Net5
             {
                 return false;
             }
+            if( FromAccount == null || ToAccount == null)
+            {
+                return false;
+            }
+            var BeforeBalance = FromAccount.Balance;
         }
 
         public static double Deposit(double amount, Account acct)
