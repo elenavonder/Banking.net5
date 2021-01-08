@@ -20,6 +20,13 @@ namespace Banking.Net5
                 return false;
             }
             var BeforeBalance = FromAccount.Balance;
+            var AfterBalance = FromAccount.Withdraw(amount);
+            if(BeforeBalance != AfterBalance + amount)
+            {
+                return false;
+            }
+            ToAccount.Deposit(amount);
+            return true;
         }
 
         public static double Deposit(double amount, Account acct)
