@@ -9,6 +9,14 @@ namespace Banking.Net5
         public double Balance { get; set; }
         public string Description { get; set; }
 
+        public static bool Transfer (double amount, Account FromAccount, Account ToAccount)
+        {
+            if (amount <= 0)
+            {
+                return false;
+            }
+        }
+
         public static double Deposit(double amount, Account acct)
         {
             return acct.Deposit(amount);
