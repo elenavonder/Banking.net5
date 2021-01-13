@@ -13,7 +13,9 @@ namespace Banking.Net5
 
         public double PayInterest (int months)
         {
-
+            var intrest = this.CalculateInterest(months);
+            Deposit(intrest);
+            return intrest;
         }
         public Savings()
         {
