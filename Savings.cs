@@ -11,6 +11,10 @@ namespace Banking.Net5
             return this.Balance * (this.InterestRate / 12) * months;
         }
 
+        public double PayInterest (int months)
+        {
+
+        }
         public Savings()
         {
         }
