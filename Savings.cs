@@ -17,6 +17,9 @@ namespace Banking.Net5
             Deposit(intrest);
             return intrest;
         }
+
+        public Savings (double intrate, string description) : base (description)
+
         public Savings()
         {
         }
