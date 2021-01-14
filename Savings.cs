@@ -18,7 +18,15 @@ namespace Banking.Net5
             return intrest;
         }
 
-        public Savings (double intrate, string description) : base (description)
+        public Savings (double intrate, string description) : base(description)
+        {
+            this.InterestRate = intrate;
+        }
+
+        public Savings (string description) : base(description)
+        {
+
+        }
 
         public Savings()
         {
