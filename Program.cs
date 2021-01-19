@@ -6,8 +6,7 @@ namespace Banking.Net5
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
-
+            var sav1 = new Savings(0.12, "My Savings");
 
         }
     }
