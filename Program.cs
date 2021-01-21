@@ -15,7 +15,6 @@ namespace Banking.Net5
             sav2.PayInterest(1);
 
             var acct1 = new Account();
-
         }
     }
 }
