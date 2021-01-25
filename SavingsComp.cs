@@ -7,6 +7,11 @@ namespace Banking.Net5
         public double InterestRate { get; private set; } = 0.01;
 
 
+        public void print()
+        {
+            Console.WriteLine($"IntRate: [{this.InterestRate}], Balance: [{account.Balance}], Description: [{account.Description}]");
+        }
+
         public SavingsComp(double intrate, string description)
         {
             this.account = new Account(description);
