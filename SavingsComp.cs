@@ -9,7 +9,8 @@ namespace Banking.Net5
 
         public SavingsComp(double intrate, string description)
         {
-            this.account
+            this.account = new Account(description);
+            this.InterestRate = intrate;
         }
         public SavingsComp (string description)
         {
