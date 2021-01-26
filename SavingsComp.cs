@@ -6,6 +6,11 @@ namespace Banking.Net5
         public Account account { get; private set; } = null;
         public double InterestRate { get; private set; } = 0.01;
 
+        public double Withdraw (double amount)
+        {
+            return this.account.Withdraw(amount);
+        }
+
         public double CalculateInterest(int months)
         {
             return this.account.Balance * (this.InterestRate / 12) * months;
