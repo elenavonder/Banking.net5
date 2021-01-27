@@ -6,6 +6,11 @@ namespace Banking.Net5
         public Account account { get; private set; } = null;
         public double InterestRate { get; private set; } = 0.01;
 
+        public static bool Transfer(amount, FromAccount.account, ToAccount.account)
+        {
+
+        }
+
 
 
         public double Deposit(double amount)
