@@ -11,7 +11,10 @@ namespace Banking.Net5
 
         }
 
-
+        public static bool Transfer(double amount, SavingsComp FromAccount, SavingsComp ToAccount)
+        {
+            return Account.Transfer(amount, FromAccount.account, ToAccount.account);
+        }
 
         public double Deposit(double amount)
         {
