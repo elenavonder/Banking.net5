@@ -6,6 +6,11 @@ namespace Banking.Net5
         public Account account { get; private set; } = null;
         public double InterestRate { get; private set; } = 0.01;
 
+        public static bool Transfer(double amount, SavingsComp FromAccount, Account ToAccount)
+        {
+            return Account.Transfer(amount, FromAccount.account, ToAccount);
+        }
+
         public static bool Transfer(double amount, Account FromAccount, SavingsComp ToAccount)
         {
             return Account.Transfer(amount, FromAccount, ToAccount.account);
